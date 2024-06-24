@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --backgroundColor: #4c542c;
+    --xBackgroundColor: #c3c3b3;
+    --oBackgroundColor: #a39b8c;
+    --xoFontColor: #8c3944;
+    --fontColor: #141410;
+    --whiteColor: #ffffff;
+    --blackColor: #111111;
+    --boxBackground: #ffffc7;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: var(--backgroundColor);
+    text-align: center;
+    padding: 5rem;
+}
+
+h1 {
+    font-size: 6.2rem;
+    color: var(--fontColor);
+}
+
+h2 {
+    font-size: 3rem;
+    color: var(--fontColor);
+    margin-top: 1rem;
+}
+
+h3 {
+    font-size: 2rem;
+    color: var(--fontColor);
+    margin-top: 1rem;
+}
+
+.container {
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    width: 50vmin;
+    height: 50vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2vmin;
+}
+
+.box {
+    font-size: 8vmin;
+    color: var(--xoFontColor);
+    width: 15vmin;
+    height: 15vmin;
+    border-radius: 2rem;
+    border: 0;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease;
+    background-color: var(--boxBackground);
+}
+
+#reset {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--whiteColor);
+    background-color: var(--oBackgroundColor);
+    border-radius: 1rem;
+    border: 0;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    padding: 1.5rem 3rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+#reset:hover {
+    color: var(--oBackgroundColor);
+    background-color: var(--whiteColor);
+}
+
+.cover-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url(img/tenor.gif);
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.cover p {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--backgroundColor);
+    margin-top: 2rem;
+}
+
+.cover img {
+    width: 20%;
+    height: auto;
+    opacity: 0.9;
+}
+
+#playAgain {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--whiteColor);
+    background-color: var(--oBackgroundColor);
+    border-radius: 1rem;
+    border: 0;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    padding: 1.5rem 3rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    margin-top: 2rem;
+}
+
+#playAgain:hover {
+    color: var(--oBackgroundColor);
+    background-color: var(--whiteColor);
+}
+
+.hide {
+    display: none;
+}
+
+.tieCover-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url(img/tie.gif);
+    background-size: 35%;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.tieCover {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.tieCover p {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ca0c0c;
+    margin-top: 2rem;
+}
+
+.tieCover img {
+    width: 20%;
+    height: auto;
+    opacity: 0.9;
+}
+
+.playAgain {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--whiteColor);
+    background-color: var(--oBackgroundColor);
+    border-radius: 1rem;
+    border: 0;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    padding: 1rem 3rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    margin-top: 2rem;
+}
+
+.playAgain:hover {
+    color: var(--oBackgroundColor);
+    background-color: var(--whiteColor);
+}
+
+@media only screen and (max-width: 520px) {
+    h1 {
+        font-size: 5.2rem;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    h1 {
+        font-size: 4.2rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+
+    }
+
+    h3 {
+        font-size: 1.8rem;
+
+    }
+
+    .container {
+        min-height: auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
